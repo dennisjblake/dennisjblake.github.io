@@ -15,6 +15,15 @@
       rel="stylesheet"
     />
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light")
+            document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -36,6 +45,39 @@
           <li><a href="#experience">Experience</a></li>
           <li>
             <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+          </li>
+          <li>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle color theme"
+            >
+              <svg
+                class="icon-moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg
+                class="icon-sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+                />
+              </svg>
+            </button>
           </li>
         </ul>
       </div>
@@ -65,7 +107,29 @@
               <span>CI/CD</span>
               <span>Docker</span>
             </div>
-            <p class="hero-auth">US Work Authorization · Holland, MI</p>
+            <div
+              class="auth-chip"
+              role="note"
+              aria-label="United States work authorization"
+            >
+              <span class="auth-chip-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </span>
+              <span class="auth-chip-text">
+                <strong>Authorized to work in the U.S.</strong>
+                <span>Full US work authorization · Holland, MI</span>
+              </span>
+            </div>
             <div class="hero-actions">
               <a href="#projects" class="btn btn-primary">View Projects</a>
               <a
@@ -119,7 +183,7 @@
               <div class="metric-label">Years in Test Automation</div>
             </div>
             <div class="metric-card reveal">
-              <div class="metric-value">1000+</div>
+              <div class="metric-value">3000+</div>
               <div class="metric-label">Automated Test Scenarios</div>
             </div>
             <div class="metric-card reveal">
@@ -127,11 +191,11 @@
               <div class="metric-label">Regression Time Reduction</div>
             </div>
             <div class="metric-card reveal">
-              <div class="metric-value">150+</div>
+              <div class="metric-value">250+</div>
               <div class="metric-label">Successful Releases Supported</div>
             </div>
             <div class="metric-card reveal">
-              <div class="metric-value">8</div>
+              <div class="metric-value">12+</div>
               <div class="metric-label">Applications Automated</div>
             </div>
           </div>
