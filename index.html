@@ -23,9 +23,9 @@
         <a href="./" class="logo">Dennis <span>Blake</span></a>
         <div
           class="menu-toggle"
-          onclick="
-            document.querySelector('.nav-links').classList.toggle('active')
-          "
+          aria-label="Toggle menu"
+          role="button"
+          tabindex="0"
         >
           <span></span><span></span><span></span>
         </div>
@@ -109,28 +109,28 @@
       <!-- Metrics -->
       <section id="metrics" class="section section--alt">
         <div class="container-page">
-          <div class="section-header">
+          <div class="section-header reveal">
             <p class="section-label">Impact</p>
             <h2 class="section-title">Measurable results across every role</h2>
           </div>
           <div class="metrics-grid">
-            <div class="metric-card">
+            <div class="metric-card reveal">
               <div class="metric-value">12+</div>
               <div class="metric-label">Years in Test Automation</div>
             </div>
-            <div class="metric-card">
+            <div class="metric-card reveal">
               <div class="metric-value">1000+</div>
               <div class="metric-label">Automated Test Scenarios</div>
             </div>
-            <div class="metric-card">
+            <div class="metric-card reveal">
               <div class="metric-value">40%</div>
               <div class="metric-label">Regression Time Reduction</div>
             </div>
-            <div class="metric-card">
+            <div class="metric-card reveal">
               <div class="metric-value">150+</div>
               <div class="metric-label">Successful Releases Supported</div>
             </div>
-            <div class="metric-card">
+            <div class="metric-card reveal">
               <div class="metric-value">8</div>
               <div class="metric-label">Applications Automated</div>
             </div>
@@ -141,7 +141,7 @@
       <!-- Featured Projects -->
       <section id="projects" class="section section--border">
         <div class="container-page">
-          <div class="section-header">
+          <div class="section-header reveal">
             <p class="section-label">Projects</p>
             <h2 class="section-title">What I've built</h2>
             <p class="section-subtitle">
@@ -150,7 +150,7 @@
             </p>
           </div>
           <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card reveal">
               <p class="project-company">Mitsubishi Logisnext Americas</p>
               <h3 class="project-title">
                 Enterprise Playwright Automation Framework
@@ -175,7 +175,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
               <p class="project-company">Mitsubishi Logisnext Americas</p>
               <h3 class="project-title">
                 CI/CD Pipeline for Automated Test Execution
@@ -201,7 +201,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
               <p class="project-company">SmarterX</p>
               <h3 class="project-title">Cypress E2E & API Test Suite</h3>
               <p class="project-description">
@@ -222,7 +222,7 @@
               </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reveal">
               <p class="project-company">Trinetix</p>
               <h3 class="project-title">Selenium BDD Automation Framework</h3>
               <p class="project-description">
@@ -251,45 +251,45 @@
       <!-- Skills -->
       <section id="skills" class="section section--alt">
         <div class="container-page">
-          <div class="section-header">
+          <div class="section-header reveal">
             <p class="section-label">Expertise</p>
             <h2 class="section-title">Skills & technologies</h2>
           </div>
           <div class="skills-grid">
-            <div class="skill-group">
+            <div class="skill-group reveal">
               <h3 class="skill-group-title">Test Automation</h3>
               <p class="skill-group-items">
                 Playwright · Cypress · Selenium · Selenide · Page Object Model ·
                 BDD · Cucumber
               </p>
             </div>
-            <div class="skill-group">
+            <div class="skill-group reveal">
               <h3 class="skill-group-title">Programming</h3>
               <p class="skill-group-items">
                 TypeScript · JavaScript · Java · SQL · HTML/CSS
               </p>
             </div>
-            <div class="skill-group">
+            <div class="skill-group reveal">
               <h3 class="skill-group-title">API Testing</h3>
               <p class="skill-group-items">
                 REST Assured · Postman · Newman · Swagger · Fiddler · Burp Suite
               </p>
             </div>
-            <div class="skill-group">
+            <div class="skill-group reveal">
               <h3 class="skill-group-title">CI/CD & DevOps</h3>
               <p class="skill-group-items">
                 GitHub Actions · Azure DevOps · Jenkins · CircleCI · Docker ·
                 Kubernetes · Allure
               </p>
             </div>
-            <div class="skill-group">
+            <div class="skill-group reveal">
               <h3 class="skill-group-title">Databases</h3>
               <p class="skill-group-items">
                 PostgreSQL · MongoDB · AWS Redshift · Data Validation · Test
                 Data Management
               </p>
             </div>
-            <div class="skill-group">
+            <div class="skill-group reveal">
               <h3 class="skill-group-title">Testing & Tools</h3>
               <p class="skill-group-items">
                 Jira · Confluence · Zephyr · Xray · TestRail · Grafana ·
@@ -303,12 +303,12 @@
       <!-- Experience -->
       <section id="experience" class="section section--border">
         <div class="container-page">
-          <div class="section-header">
+          <div class="section-header reveal">
             <p class="section-label">Career</p>
             <h2 class="section-title">Professional experience</h2>
           </div>
           <div class="timeline">
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
               <h3 class="timeline-role">Software QA Automation Analyst</h3>
               <p class="timeline-company">
                 Mitsubishi Logisnext Americas - Grand Rapids, MI
@@ -338,7 +338,7 @@
               </ul>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
               <h3 class="timeline-role">Software QA Automation Engineer</h3>
               <p class="timeline-company">SmarterX - Boulder, CO</p>
               <p class="timeline-date">June 2023 - February 2024</p>
@@ -361,7 +361,7 @@
               </ul>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
               <h3 class="timeline-role">Senior Software QA Engineer</h3>
               <p class="timeline-company">Trinetix - Nashville, TN</p>
               <p class="timeline-date">May 2016 - May 2023</p>
@@ -382,7 +382,7 @@
               </ul>
             </div>
 
-            <div class="timeline-item">
+            <div class="timeline-item reveal">
               <h3 class="timeline-role">Software QA Engineer</h3>
               <p class="timeline-company">
                 Dell AppAssure Project, Softheme - Remote
@@ -409,7 +409,7 @@
       <!-- Contact CTA -->
       <section id="contact" class="section section--alt">
         <div class="container-page">
-          <div class="cta-section">
+          <div class="cta-section reveal">
             <h2 class="cta-title">Let's work together</h2>
             <p class="cta-subtitle">
               Open to Senior SDET, Staff SDET, and QA Automation Engineering
@@ -452,5 +452,6 @@
         >
       </div>
     </footer>
+    <script src="js/main.js" defer></script>
   </body>
 </html>
