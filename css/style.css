@@ -550,7 +550,7 @@ main {
 
 .btn-outline {
   border: 1px solid var(--border);
-  color: var(--text-secondary);
+  color: var(--text);
   background: transparent;
 }
 
@@ -1112,16 +1112,21 @@ footer .footer-links a:hover {
     border-radius: 22px;
   }
 
-  .metrics-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Odd last metric fills the row instead of leaving an empty cell */
+  .metrics-grid .metric-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 }
 
@@ -1193,7 +1198,6 @@ footer .footer-links a:hover {
   }
 
   .metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
     border-radius: 12px;
   }
 
@@ -1237,10 +1241,6 @@ footer .footer-links a:hover {
 
   .hero-actions .btn {
     width: 100%;
-  }
-
-  .metrics-grid {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
