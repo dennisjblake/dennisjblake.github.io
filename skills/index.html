@@ -15,7 +15,16 @@
       rel="stylesheet"
     />
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "dark" || t === "light")
+            document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="../css/style.css?v=20260903b" />
   </head>
   <body>
     <nav class="navbar">
@@ -23,9 +32,9 @@
         <a href="../" class="logo">Dennis <span>Blake</span></a>
         <div
           class="menu-toggle"
-          onclick="
-            document.querySelector('.nav-links').classList.toggle('active')
-          "
+          aria-label="Toggle menu"
+          role="button"
+          tabindex="0"
         >
           <span></span><span></span><span></span>
         </div>
@@ -35,6 +44,39 @@
           <li><a href="../experience/">Experience</a></li>
           <li><a href="../skills/" class="active">Skills</a></li>
           <li><a href="../contact/">Contact</a></li>
+          <li>
+            <button
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle color theme"
+            >
+              <svg
+                class="icon-moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg
+                class="icon-sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+                />
+              </svg>
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
@@ -164,5 +206,13 @@
         <a href="../contact/">Contact</a>
       </div>
     </footer>
+    <script src="../js/main.js?v=20260903b" defer></script>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "b1f46ae8decf4799a4e86631f6361833"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </body>
 </html>
